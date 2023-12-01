@@ -1,25 +1,16 @@
 /**
  * @jest-environment node
  */
-import Web3, { Contract, ContractAbi } from 'web3';
+import Web3, { Contract } from 'web3';
 import assert from 'assert';
 import Ganache from 'ganache';
-import path from 'path';
-import fs from 'fs';
 
 import CampaignFactoryAbi from '../../ethereum/build/CampaignFactory.json';
 import CampaignAbi from '../../ethereum/build/Campaign.json';
+import getByteCode from '../../ethereum/bytecodeProvider';
 
-const bytecodePath: string = path.join(
-	__dirname,
-	'..',
-	'..',
-	'ethereum',
-	'build',
-	'CampaignFactory.bin',
-);
-const bytecode: string = fs.readFileSync(bytecodePath, 'utf8');
 
+const bytecode = getByteCode('CampaignFactory');
 const web3 = new Web3(Ganache.provider());
 
 let accounts: string[] = [];

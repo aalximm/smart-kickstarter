@@ -1,5 +1,5 @@
-const path = require('path');
-const fs = require('fs-extra');
+import path from 'path';
+import fs from 'fs-extra';
 const solc = require('solc');
 
 function compileContracts(contractPath: string, outputPath: string): void {
