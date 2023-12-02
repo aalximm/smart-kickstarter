@@ -19,9 +19,14 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "jest.config.js", "ethereum/compile.ts", "src/scripts/compile.mts", "jest.setup.js"],
+  "ts-node": {
+	"compilerOptions": {
+		"module": "CommonJS"
+	}
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "jest.config.js", "jest.setup.js", "ethereum/deploy.ts", "ethereum/compile.ts"],
   "exclude": ["node_modules"]
 }

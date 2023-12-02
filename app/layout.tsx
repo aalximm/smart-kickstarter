@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { Layout, Web3Wrapper } from '@/components';
+import 'semantic-ui-css/semantic.min.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-	title: 'Lottery',
+	title: 'Smart Kickstarter',
 	description: 'eth course',
 };
 
@@ -15,7 +17,11 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>{children}</body>
+			<Web3Wrapper>
+				<body className={inter.className}>
+					<Layout>{children}</Layout>
+				</body>
+			</Web3Wrapper>
 		</html>
 	);
 }
