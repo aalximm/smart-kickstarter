@@ -1,0 +1,16 @@
+export const CONTRIBUTE_INPUT_LABEL = 'Amount to Contribute';
+export const WEI = 'wei';
+export const ETHER = 'ether';
+export const CAMPAIGN_VIEW_TITLE = 'Campaign Show';
+export const REQUESTS_VIEW_TITLE = 'Requests';
+export const NEW_REQUEST_TITLE = 'Create New Request';
+export const OPEN_CAMPAIGNS_TITLE = 'Open Campaigns';
+export const CREATE_CAMPAIGN_TITLE = 'Create a Campaign';
+export const CREATE_CAMPAIGN_BUTTON_TEXT = 'Create!';
+export const CONTRIBUTE_BUTTON_TEXT = 'Contribute';
+export const VIEW_REQUESTS_BUTTON_TEXT = 'View Requests';
+export const CREATE_REQUESTS_BUTTON_TEXT = 'Add Request';
+export const MINIMUM_CONTRIBUTION_INPUT_LABEL = 'Minimum Contribution';
+export const DESCRIPTION_INPUT_LABEL = 'Desription';
+export const VALUE_IN_ETHER_INPUT_LABEL = 'Value in Ether';
+export const RECIPIENT_INPUT_LABEL = 'Recipient';

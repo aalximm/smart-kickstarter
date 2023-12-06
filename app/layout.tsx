@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Roboto } from 'next/font/google';
 import { Layout, Web3Wrapper } from '@/components';
 import 'semantic-ui-css/semantic.min.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const font = Roboto({ weight: '400', subsets: ['latin'] });
 
 export const metadata: Metadata = {
 	title: 'Smart Kickstarter',
@@ -18,7 +18,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<Web3Wrapper>
-				<body className={inter.className}>
+				<body className={font.className}>
 					<Layout>{children}</Layout>
 				</body>
 			</Web3Wrapper>

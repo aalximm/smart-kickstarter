@@ -1,28 +1,13 @@
-import { Body, Campaigns, CreateCampaignButton } from '@/components';
-import { getFactory, serverSideWeb3 } from '@/ethereum';
-
-import { cache } from 'react';
+import { Campaigns } from '@/components';
+import { getCampaigns } from '@/helpers';
+import { OPEN_CAMPAIGNS_TITLE } from '@/constant/text';
 
 export default async function Home() {
 	const campaigns = await getCampaigns();
 	return (
-		<Body campaigns={campaigns}/>
+		<>
+			<h3>{OPEN_CAMPAIGNS_TITLE}</h3>
+			<Campaigns addresses={campaigns} />
+		</>
 	);
 }
-
-const getCampaigns = cache(async () => {
-	// const factory = getFactory(serverSideWeb3);
-	// const campaigns: string[] = await factory.methods
-	// 	.getDeployedCampaigns()
-	// 	.call()
-	// 	.catch((err) => {
-	// 		console.log(JSON.stringify(err));
-	// 		return Promise.resolve([]);
-	// 	}) as string[];
-
-	return [
-		'0xAdeB484F035f1E10d4a6059d5629Db800cB3e548',
-		'0xAdeB484F035f1E10d4a6059d5629Db800cB3e549',
-		'0xAdeB484F035f1E10d4a6059d5629Db800cB3e547',
-	];
-});
